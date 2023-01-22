@@ -10,8 +10,12 @@ export const CreateDogForm = ({ addDog }) => {
       id="create-dog-form"
       onSubmit={(e) => {
         e.preventDefault();
-      }}
-    >
+        if (e.target[0].value.length !== 0 && e.target[0].value.length !== 0) {
+          addDog(e.target[0].value, selectedImage, e.target[1].value);
+          e.target[0].value = "";
+          e.target[1].value = "";
+        }
+      }}>
       <h4>Create a New Dog</h4>
       <label htmlFor="name">Dog Name</label>
       <input type="text" />
@@ -22,10 +26,13 @@ export const CreateDogForm = ({ addDog }) => {
         id=""
         onChange={(e) => {
           setSelectedImage(e.target.value);
-        }}
-      >
+        }}>
         {Object.entries(dogPictures).map(([label, pictureValue]) => {
-          return <option value={pictureValue}>{label}</option>;
+          return (
+            <option key={label} value={pictureValue}>
+              {label}
+            </option>
+          );
         })}
       </select>
       <input type="submit" value="submit" />
