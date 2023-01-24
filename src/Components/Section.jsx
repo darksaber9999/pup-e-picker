@@ -5,8 +5,7 @@ export const Section = ({
   displayForm,
   favoriteDogCount,
   unfavoriteDogCount,
-  handleFavoriteMenuOptionsClick,
-  handleCreateDogMenuClick,
+  handleMenuOptionsClick,
   children,
 }) => {
   return (
@@ -18,19 +17,19 @@ export const Section = ({
           {/* This should display the favorited count */}
           <div
             className={`selector ${displayFavorited ? "active" : null}`}
-            onClick={() => handleFavoriteMenuOptionsClick("favorited")}>
+            onClick={() => handleMenuOptionsClick("favorited")}>
             favorited ( {favoriteDogCount} )
           </div>
 
           {/* This should display the unfavorited count */}
           <div
             className={`selector ${displayNotFavorited ? "active" : null}`}
-            onClick={() => handleFavoriteMenuOptionsClick("unfavorited")}>
+            onClick={() => handleMenuOptionsClick("unfavorited")}>
             unfavorited ( {unfavoriteDogCount} )
           </div>
           <div
             className={`selector ${displayForm ? "active" : null}`}
-            onClick={() => handleCreateDogMenuClick()}>
+            onClick={() => handleMenuOptionsClick("form")}>
             create dog
           </div>
         </div>

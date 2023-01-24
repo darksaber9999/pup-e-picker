@@ -25,7 +25,7 @@
       "name": "Kiara",
       "image": "/src/assets/blue-heeler.png",
       "description": "quantify Assimilated yawning plain bypassing",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 5
     },
     {
@@ -139,6 +139,20 @@
       "description": "A dog.",
       "isFavorite": false,
       "id": 29
+    },
+    {
+      "name": "Demon Dog",
+      "image": "/src/assets/corgi.png",
+      "description": "This one's a little hellish.",
+      "isFavorite": true,
+      "id": 30
+    },
+    {
+      "name": "Haddie",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "An old dog.",
+      "isFavorite": false,
+      "id": 31
     }
   ]
 }
